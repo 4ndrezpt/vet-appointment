@@ -175,7 +175,7 @@ html {
     background-color: #353535;
 }
 
-h1{font-size: var(--h1-par); letter-spacing: var(--h1-lh)/1.25rem}
+h1{font-size: var(--h1-par); letter-spacing: var(--h1-lh)/1.25rem; text-align: center;}
 h2{font-size: var(--h2-par)}
 h3{font-size: var(--h3-par)}
 h4{font-size: var(--h4-par)}
@@ -311,7 +311,7 @@ section {
     margin-right: auto;
     color: var(--txt-title);
 }
-form {
+.main__form {
     width: 95%;
     max-width: 500px;
     display: flex;
@@ -444,6 +444,61 @@ table {
     margin-bottom: 55px;
     max-height: 350px;
     overflow-y: scroll;
+}
+.section__and__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 13px 3px;
+    gap: 10px;
+    justify-content: space-around;
+    background-color: var(--mdg-darken-color);
+    & h2, h3, h4 {
+        text-align: center;
+    }
+    & form{
+        width: 100%;
+        max-width: 450px;
+        background-color: var(--darken-main-color);
+        color: var(--lg-100);
+        padding-bottom: 21px;
+        border-radius: 13px;
+        margin-left: 13px;
+        & fieldset {
+            display: block;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 13px;
+        }
+        & input,label, textarea{
+            display: block;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+        }
+        & button {
+            margin-bottom: 21px;
+        }
+    }
+    & .injector {
+        width: 30%;
+    }
+    & .viewer {
+        width: 60%;
+        background-color: var(--mdg-darken-color);
+        overflow-y: scroll;
+    }
+}
+.appointment {
+    margin-top: 5px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 13px;
+    background-color: var(--lg-100);
+    padding: 21px;
 }
 footer {
     background-color: #282828;
