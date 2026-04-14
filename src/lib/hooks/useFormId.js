@@ -33,7 +33,7 @@ export const useFormId = (initialForm = {}, onSubmit) => {
     let hasUpper = '';
     let regex = '';
     if(type.search(upper) > 0){
-      console.log(type.search(upper));
+      //console.log(type.search(upper));
       hasUpper = type.slice(type.search(upper));
       //console.log(hasUpper)
       regex = patterns[hasUpper.toLowerCase()];
@@ -50,6 +50,12 @@ export const useFormId = (initialForm = {}, onSubmit) => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    for(let item in formState){
+      if(item.isValid){
+        console.log("All form was successful validated");
+      }
+    }
+
     //cambar el id cuando se enviar la info
     setFormState({
       ...formState,

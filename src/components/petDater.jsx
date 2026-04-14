@@ -17,7 +17,7 @@ export const PetDater = ({ onSave }) => {
   const { id, name, email, petName, typeName, raceName, date, hour, description } = formState;
 
   return (
-    <>
+    <div className="injector">
       <form onSubmit={handleSubmit}>
         <h4>Appointment Form</h4>
         <fieldset>
@@ -86,8 +86,10 @@ export const PetDater = ({ onSave }) => {
             onChange={handleChange}
           ></textarea>
         </fieldset>
-        <button type="submit">Enviar</button>
+        <button type="submit"
+          disabled={!name.isValid && !email.isValid && !petName.isValid && !raceName.isValid && !typeName.isValid && !description.isvalid}
+        >Enviar</button>
       </form>
-    </>
+    </div>
   );
 }
